@@ -2682,14 +2682,8 @@ Text GLabel 8750 2150 0    50   Input ~ 0
 DT8
 Text GLabel 8750 1350 0    50   Input ~ 0
 SCK
-Text GLabel 9750 1750 2    50   Input ~ 0
-EN
-Text GLabel 9750 1850 2    50   Input ~ 0
-DIR
-Text GLabel 9750 1950 2    50   Input ~ 0
-PUL
-Text GLabel 8750 2450 0    50   Input ~ 0
-UPPER_LIMIT
+Text GLabel 9750 5400 2    50   Input ~ 0
+DRIVE
 Text GLabel 8750 2250 0    50   Input ~ 0
 LOWER_LIMIT
 $Comp
@@ -2708,4 +2702,105 @@ Wire Wire Line
 Wire Wire Line
 	9350 2750 9350 3100
 Connection ~ 9350 2750
+Text GLabel 9350 750  1    50   Input ~ 0
+VCC
+Text GLabel 9450 750  1    50   Input ~ 0
+VUSB
+$Comp
+L Connector:Conn_01x03_Male J9
+U 1 1 6295BCB2
+P 9200 4150
+F 0 "J9" H 9300 4500 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 9300 4400 50  0000 C CNN
+F 2 "" H 9200 4150 50  0001 C CNN
+F 3 "~" H 9200 4150 50  0001 C CNN
+	1    9200 4150
+	1    0    0    -1  
+$EndComp
+Text Notes 8900 3750 0    50   ~ 0
+Connection to Linear Actuator
+Text Notes 8950 4250 0    50   ~ 0
+SIG\n+V\nGND
+Text GLabel 9400 4050 2    50   Input ~ 0
+DRIVE
+Text GLabel 9400 4150 2    50   Input ~ 0
+VUSB
+$Comp
+L power:GND #PWR?
+U 1 1 6296FD6B
+P 9500 4350
+F 0 "#PWR?" H 9500 4100 50  0001 C CNN
+F 1 "GND" H 9505 4177 50  0000 C CNN
+F 2 "" H 9500 4350 50  0001 C CNN
+F 3 "" H 9500 4350 50  0001 C CNN
+	1    9500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4250 9500 4250
+Wire Wire Line
+	9500 4250 9500 4350
+$Comp
+L TXS0104ED:TXS0104ED U1
+U 1 1 629E0183
+P 9050 5600
+F 0 "U1" H 9050 6370 50  0000 C CNN
+F 1 "TXS0104ED" H 9050 6279 50  0000 C CNN
+F 2 "SOIC127P600X175-14N" H 9050 5600 50  0001 L BNN
+F 3 "" H 9050 5600 50  0001 L BNN
+	1    9050 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 629ED189
+P 9750 6100
+F 0 "#PWR?" H 9750 5850 50  0001 C CNN
+F 1 "GND" H 9755 5927 50  0000 C CNN
+F 2 "" H 9750 6100 50  0001 C CNN
+F 3 "" H 9750 6100 50  0001 C CNN
+	1    9750 6100
+	1    0    0    -1  
+$EndComp
+Text GLabel 9750 5100 2    50   Input ~ 0
+VCC
+Text GLabel 9750 5200 2    50   Input ~ 0
+VUSB
+Text GLabel 7950 5800 0    50   Input ~ 0
+OE
+$Comp
+L Device:R R33
+U 1 1 62A2E1D6
+P 8100 6050
+F 0 "R33" H 8170 6096 50  0000 L CNN
+F 1 "5k" H 8170 6005 50  0000 L CNN
+F 2 "" V 8030 6050 50  0001 C CNN
+F 3 "~" H 8100 6050 50  0001 C CNN
+	1    8100 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62A37819
+P 8100 6200
+F 0 "#PWR?" H 8100 5950 50  0001 C CNN
+F 1 "GND" H 8105 6027 50  0000 C CNN
+F 2 "" H 8100 6200 50  0001 C CNN
+F 3 "" H 8100 6200 50  0001 C CNN
+	1    8100 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 5800 8100 5800
+Wire Wire Line
+	8100 5900 8100 5800
+Connection ~ 8100 5800
+Wire Wire Line
+	8100 5800 8350 5800
+Text GLabel 9750 1850 2    50   Input ~ 0
+OE
+Text GLabel 9750 1750 2    50   Input ~ 0
+PIN_DRIVE
+Text GLabel 8350 5400 0    50   Input ~ 0
+PIN_DRIVE
 $EndSCHEMATC
